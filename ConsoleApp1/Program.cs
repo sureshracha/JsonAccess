@@ -8,15 +8,15 @@ namespace ConsoleApp11
     {
         public static void Main()
         { 
-            string filePath = @"C:\Users\sures\Desktop\demoJson.json"; 
+            
+
+            string filePath = Directory.GetCurrentDirectory().Split("bin")[0] + "testdata/demoJson.json";
 
             JsonLib json = new JsonLib();
             json.loadJson(filePath);
             Console.WriteLine(json.getJsonSAsString());
-            json.setItem("lastName", "kuamraaaass");
-            Console.WriteLine(json.getJsonSAsString());
-            json.saveToJsonFile();
-            Console.WriteLine(json.getItem("firstName"));
+            json.setItem("Address", "Street 1, satya nagar, hyderabad-200");
+            Console.WriteLine(json.getJsonSAsString()); 
            
 
              

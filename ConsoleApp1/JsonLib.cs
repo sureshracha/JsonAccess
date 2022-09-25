@@ -73,5 +73,13 @@ namespace Custom.Json.Lib
 
         }
 
+        public void addKeyValue(string Key, string value)
+        {
+
+            var jObj = JObject.Parse(this.getJsonSAsString());
+            this.json.Add( JObject.FromObject(new { Key = value }));
+            this.saveToFile(jObj);
+        }
+
     }
 }
