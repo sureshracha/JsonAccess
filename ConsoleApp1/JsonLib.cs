@@ -93,5 +93,22 @@ namespace Custom.Json.Lib
 
         }
 
+        public string getKeyValueToArrayItem(string arrayName, string searchKey, string searchKeyvalue, string getKey)
+        {
+            int index = -1;
+            // JArray arrayItem = (JArray)json[arrayName]; 
+            dynamicJsonObj = this.getDynamicJsonObj();
+            int i = 0;
+            foreach (var item in dynamicJsonObj[arrayName])
+            {
+                if (item[searchKey].ToString() == searchKeyvalue)
+                {
+                    index = i++;
+                }
+            }
+          return  dynamicJsonObj[arrayName][index][getKey].ToString(); 
+
+        }
+
     }
 }

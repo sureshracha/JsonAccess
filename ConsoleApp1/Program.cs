@@ -20,7 +20,9 @@ namespace ConsoleApp11
 
             json.setKeyValueToArrayItem("map", "mapId","26", "mapName", "Kumar000");
 
+            string value = json.getKeyValueToArrayItem("map", "mapId", "26", "mapName");
 
+            Console.WriteLine(value);
 
 
 
