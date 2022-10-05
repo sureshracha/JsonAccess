@@ -2,5 +2,15 @@
   "UserName": "reda",
   "FirstName": "Ratnakar",
   "LastName": "Eda",
-  "Address": "Street 1, satya nagar, hyderabad-200"
+  "Address": "Street 1, satya nagar, hyderabad-200",
+  "map": [
+    {
+      "mapId": 26,
+      "mapName": "Kumar000"
+    },
+    {
+      "mapId": 1322,
+      "mapName": "kumar"
+    }
+  ]
 }

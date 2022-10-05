@@ -14,12 +14,15 @@ namespace ConsoleApp11
 
             JsonLib json = new JsonLib();
             json.loadJson(filePath);
-            Console.WriteLine(json.getJsonSAsString());
-            json.setItem("Address", "Street 1, satya nagar, hyderabad-200");
-            Console.WriteLine(json.getJsonSAsString()); 
-           
+           // Console.WriteLine(json.getJsonSAsString());
+          //  json.setItem("Address", "Street 1, satya nagar, hyderabad-200");
+           // Console.WriteLine(json.getJsonSAsString());
 
-             
+            json.setKeyValueToArrayItem("map", "mapId","26", "mapName", "Kumar000");
+
+
+
+
 
         }
 

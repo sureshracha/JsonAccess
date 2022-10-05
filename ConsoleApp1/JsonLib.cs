@@ -72,13 +72,25 @@ namespace Custom.Json.Lib
             return (string)this.json[key]; 
 
         }
-
-        public void addKeyValue(string Key, string value)
+ 
+        public void setKeyValueToArrayItem(string arrayName, string searchKey,string searchKeyvalue,string setKey, string setvalue)
         {
+            int index = -1;
+            // JArray arrayItem = (JArray)json[arrayName]; 
+            dynamicJsonObj =  this.getDynamicJsonObj(); 
+            int i=0;
+            foreach (var item in dynamicJsonObj[arrayName])
+            {
+                if(item[searchKey].ToString() == searchKeyvalue)
+                {
+                    index = i++;
+                }
+            }
+            dynamicJsonObj[arrayName][index][setKey] = setvalue;
 
-            var jObj = JObject.Parse(this.getJsonSAsString());
-            this.json.Add( JObject.FromObject(new { Key = value }));
-            this.saveToFile(jObj);
+            this.saveToFile(dynamicJsonObj);
+            this.loadJson(this.filePath); 
+
         }
 
     }
